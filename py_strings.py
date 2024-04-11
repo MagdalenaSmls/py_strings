@@ -29,9 +29,9 @@ def first_to_upper(text: str) -> str:
     str
         The modified text
     """
+    lista = ""
     for word in text.split():
-    	lista+=word[0].upper()+word[1:]+" "
-    	
+    	lista+=word[0].upper()+word[1:]+' '
     return lista
 
 
@@ -49,7 +49,7 @@ def count_vowels(text: str) -> int:
     inp
         Number of vowels.
     """
-    vowels = "aeiouyAEIOUY"
+    vowels = "aeiouyAEIOUYąęóĄĘÓ"
     liczba = len([char for char in text if char in vowels])
     return liczba
 
