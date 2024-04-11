@@ -32,7 +32,7 @@ def first_to_upper(text: str) -> str:
     lista = ""
     for word in text.split():
     	lista+=word[0].upper()+word[1:]+' '
-    return lista
+    return lista[0:-1]
 
 
 def count_vowels(text: str) -> int:
@@ -70,7 +70,7 @@ def sum_digits(text: str) -> int:
     """
     cyfry = '0123456789'
     tab_cyfry = [char for char in text if char in cyfry]
-    tab_cyfry_wartosc = list(map(int,tab_cyfry))    	
+    tab_cyfry_wartosc = list(map(int,tab_cyfry))
     return sum(tab_cyfry_wartosc)
 
 
@@ -91,4 +91,3 @@ def search_substr(text: str, sub: str) -> int:
     miejsce = text.find(sub)
     if miejsce == -1: return None
     else: return miejsce
-    
